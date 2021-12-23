@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technical Documentation Page - for the freeCodeCamp Responsive Design Certificate.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>CSS Grid Layout Module</title>
+</head>
+
+<body>
+
+  <!-- freeCodeCamp Test Suite -->
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+
+<!--
+TABLE OF CONTENTS
+ 
+
+Header - Page title 
+Navbar 
+Main Content article 
+Section 1: Grid Layout 
+Section 2: Browser Support
+Section 3: Grid Elements
+Section 4: Display Property
+Section 5: Grid Columns
+Section 6: Grid Rows
+Section 7: Grid Gaps 
+Section 8: Grid Lines 
+Section 9: References 
+
+-->
+
+<!--- 
+ Header - Page title 
+-->
+<header id="header-page">
+  <h1>CSS GRID</h1>
+</header>
+
+<div id="container">
+
+<!--
+ Navbar
+-->
+  <div>
+    <nav id="navbar">
+      <header>
+        <h4>
+        DOCUMENTATION
+      </h4>
+    </header>
+      
+      <ul>
+        <a 
+           href="#Grid_Layout"  
+           class="nav-link">
+          <li>Grid Layout</li>
+        </a>
+       
+        <a 
+           href="#Browser_Support" 
+           class="nav-link">
+          <li>Browser Support</li>
+        </a>
+
+        <a 
+           href="#Grid_Elements" 
+           class="nav-link">
+          <li>Grid Elements</li>
+        </a>
+
+        <a 
+           href="#Display_Property" 
+           class="nav-link">
+          <li>Display Property</li>
+        </a>
+      
+        <a 
+           href="#Grid_Columns" 
+           class="nav-link">
+          <li>Grid Columns</li>
+        </a>     
+
+        <a 
+           href="#Grid_Rows" 
+           class="nav-link">
+          <li>Grid Rows</li>
+        </a>
+      
+        <a 
+           href="#Grid_Gaps" 
+           class="nav-link">
+          <li>Grid Gaps</li>
+        </a>
+
+        <a 
+           href="#Grid_Lines" 
+           class="nav-link">
+          <li>Grid Lines</li>
+        </a>
+     
+        <a 
+           href="#References" 
+           class="nav-link">
+          <li>References</li>
+        </a>
+       </ul>  
+    </nav>
+  </div>
+  
+  
+<!---
+ Main Content Article 
+-->
+  <main id="main-doc">
+    <article>
+      
+      
+<!--
+ Grid Layout  
+-->
+      <section 
+               class="main-section"
+               id="Grid_Layout">
+        <header>
+          <h2>Grid Layout</h2>
+        </header>
+        <p>
+          The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+        </p>
+        <p>
+          Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
+        </P>
+      </section>
+      
+      
+<!--
+ Browser Support
+-->
+      <section 
+               class="main-section"
+               id="Browser_Support">
+        <header>
+          <h2>Browser Support</h2>
+        </header>
+        <p>
+          Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera, Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
+        </p>
+      </section>
+      
+
+<!--
+ Grid Elements
+-->
+      <section 
+               class="main-section"
+               id="Grid_Elements">
+        <header>
+          <h2>Grid Elements</h2>
+        </header>
+        <p>
+          A grid layout consists of a parent element, with one or more child elements.
+        </p>
+               
+        <div class="line-code">
+          &#60;<span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-container"</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;1&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;2&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;3&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;4&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;5&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;6&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;7&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;8&#60;/<span class="class">div</span>&#62;<br>
+            <span class="space">&#60;</span><span class="class">div</span> <span class="property">class</span>=<span class="value">"grid-item"</span>&#62;9&#60;/<span class="class">div</span>&#62;<br>
+          &#60;/<span class="class">div</span>&#62;
+        </div>
+     </section>               
+      
+<!--
+ Display Property
+-->
+      <section 
+               class="main-section" 
+               id="Display_Property">
+        <header>
+          <h2>Display Property</h2>
+        </header>
+        
+        <p>
+          We create a grid container by declaring <code>display: grid;</code> or <code>display: inline-grid;</code> on an element. As soon as we do this, all direct children of that element become grid items.
+        </p>
+        <div class="line-code"><span class="class">.grid-container</span> {
+          <br><span class="property space">display</span>: <span class="value">grid</span>;
+          <br><span class="property space">display</span>: <span class="value">inline-grid</span>;
+          <br>}
+        </div>
+      </section>
+      
+      
+<!-- 
+ Grid Columns
+-->
+      <section 
+               class="main-section"
+               id="Grid_Columns">
+        <header>
+          <h2>Grid Columns</h2>
+        </header>
+        
+        <p>
+          A grid column is a vertical track in a CSS Grid Layout, and is the space between two vertical grid lines. It is defined by the <code>grid-template-columns</code> property or in the shorthand <code>grid</code> or <code>grid-template</code> properties.
+        </p>
+        
+        <p>
+          In addition, columns may be created in the implicit grid when items are placed outside of columns created in the explicit grid. These columns will be auto-sized by default, or can have a size specified with the <code>grid-auto-columns</code> property. When working with alignment in CSS Grid Layout, the axis down which columns run is known as the block, or column, axis.
+        </p>
+      </section>
+
+
+        
+      
+<!-- 
+ Grid Rows
+-->
+      <section 
+               class="main-section"
+               id="Grid_Rows">
+        <header>
+          <h2>Grid Rows</h2>
+        </header>
+        
+        <p>
+          A grid row is a horizontal track in a CSS Grid Layout, that is the space between two horizontal grid lines. It is defined by the <code>grid-template-rows</code> property or in the shorthand <code>grid</code> or <code>grid-template</code> properties.
+        </p>
+        
+        <p>
+          In addition, rows may be created in the implicit grid when items are placed outside of rows created in the explicit grid. These rows will be auto sized by default, or can have a size specified with the <code>grid-auto-rows</code> property. When working with alignment in CSS Grid Layout, the axis along which rows run is known as the inline, or row, axis.
+        </p>
+      </section>
+      
+      
+<!--
+ Grid Gaps 
+-->
+      <section class="main-section" id="Grid_Gaps">
+        <header>
+          <h2>Grid Gaps</h2>
+        </header>
+        
+        <p>
+          The spaces between each column or row are called gaps. Instead of creating empty grid tracks or trying to hack things up with margins, <code>grid-gap</code> is a property available on grid containers that makes it easy to create gutters in your CSS Grid layouts.
+        </p>
+        <p>
+          You can adjust the gap size by using one of the following properties:
+        </p>
+        <ul>
+          <li><a href="#gcg"><code>grid-column-gap</code></a></li>
+          <li><a href="#grg"><code>grid-row-gap</code></a></li>
+          <li><a href="#gg"><code>grid-gap</code></a></li>
+        </ul>
+        <p id="gcg">The <code>grid-column-gap</code> property sets the gap between the columns:</p>
+        <div class="line-code"><span class="class">.grid-container</span> {
+          <br><span class="property space">display</span>: <span class="value">grid</span>;
+          <br><span class="property space">grid-column-gap</span>: <span class="value">50px</span>;
+          <br>}
+        </div>
+        <p id="grg">The <code>grid-row-gap</code> property sets the gap between the rows:</p>
+        <div class="line-code"><span class="class">.grid-container</span> {
+          <br><span class="property space">display</span>: <span class="value">grid</span>;
+          <br><span class="property space">grid-column-gap</span>: <span class="value">50px</span>;
+          <br>}
+        </div>
+        <p id="gg">The <code>grid-gap</code> property is a shorthand property for the grid-column-gap and the grid-row-gap properties:</p>
+        <div class="line-code"><span class="class">.grid-container</span> {
+          <br><span class="property space">display</span>: <span class="value">grid</span>;
+          <br><span class="property space">grid-gap</span>: <span class="value">50px 100px</span>;
+          <br>}
+        </div>
+        <p>The <code>grid-gap</code> property can also be used to set both the row gap and the column gap in one value:</p>
+        <div class="line-code"><span class="class">.grid-container</span> {
+          <br><span class="property space">display</span>: <span class="value">grid</span>;
+          <br><span class="property space">grid-gap</span>: <span class="value">50px</span>;
+          <br>}
+        </div>
+      </section>
+     
+      
+<!--
+ Summary 
+-->
+      <section class="main-section" id="Grid_Lines">
+        <header>
+          <h2>Grid Lines</h2>
+        </header>
+        
+        <p>
+          We now move on from creating a grid, to placing things on the grid. Our grid always has lines, which lines start at 1 and relate to the Writing Mode of the document. Therefore in English, column line 1 is on the left hand side of the grid and row line 1 at the top. In Arabic column line 1 would be on the right hand side, as Arabic is written right to left.
+        </p>
+        
+        <p>
+          We can place things according to these lines by specifying the start and end line. We do this using the following properties:
+        </p>
+        <ul>
+          <li>
+            <code>grid-column-start</code>
+          </li>
+          <li>
+            <code>grid-column-end</code>
+          </li>
+          <li>
+            <code>grid-row-start</code>
+          </li>
+          <li>
+            <code>grid-row-end</code>
+          </li>
+        </ul>
+        
+        <p>
+          These properties can all have a line number as the value. You can also use the shorthand properties:
+        </p>
+        <ul>
+          <li>
+            <code>grid-column</code>
+          </li>
+          <li>
+            <code>grid-row</code>
+          </li>
+        </ul>
+        
+        <p>
+          These let you specify the start and end lines at once, separated by a 
+          <code>/</code>
+          — a forward slash character.
+        </p>
+        
+        <p>
+          <a 
+             href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html"
+             target="blank">
+            Download this file</a>
+          as a starting point or 
+          <a 
+             href="https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html" 
+             target="blank">
+            see it live here</a>. It has a grid defined already, and a simple article outlined. You can see that auto-placement is placing items one into each cell of the grid that we have created.
+        </p>
+        
+        <p>
+          We will instead place all of the elements for our site on the grid, using the grid lines. Add the following rules to the bottom of your CSS:
+        </p>
+        
+        <div class="line-code"><span class="class">header</span> {
+          <br><span class="property space">grid-column</span>: <span class="value">1 / 3</span>;
+          <br><span class="property space">grid-row</span>: <span class="value">1</span>;
+          <br>}
+          <br>
+          <br><span class="class">article</span> {
+          <br><span class="property space">grid-column</span>: <span class="value">2</span>;
+          <br><span class="property space">grid-row</span>: <span class="value">2</span>;
+          <br>}
+          <br>
+          <br><span class="class">aside</span> {
+          <br><span class="property space">grid-column</span>: <span class="value">1</span>;
+          <br><span class="property space">grid-row</span>: <span class="value">2</span>;
+          <br>}
+          <br>
+          <br><span class="class">footer</span> {
+          <br><span class="property space">grid-column</span>: <span class="value">1 / 3</span>;
+          <br><span class="property space">grid-row</span>: <span class="value">3</span>;
+          <br>}
+        </div>
+      </section>
+      
+      
+<!--
+ References
+-->
+      <section class="main-section" id="References">
+        <header>
+          <h2>References</h2>
+        </header>
+      </section>
+      <ul> 
+        <li><a href="https://www.w3schools.com/css/css_grid.asp" target="blank">w3schools</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/" target="blank">MDN</a>
+        </li>
+      </ul> 
+      
+    </article>
+
+  </main>
+</div>
+  
+<!-- Footer -->
+  <footer>
+    <div id="name" class="name">Coded by Plinky Sumagyap for <a href="https://www.freecodecamp.org/plinkysumagyap"
+        target="_blank" class="footer-link-fcc">freeCodeCamp <i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+    </div>
+    <div class="my-links">
+      <a href="https://www.behance.net/plinkysumagyap" target="_blank" class="footer-link">
+        <i class="fa fa-behance-square fa-2x" aria-hidden="true"></i></a>
+      <a href="https://codepen.io/plinkydoodles" target="_blank" class="footer-link">
+        <i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a>
+      <a href="https://plinkydoodles.github.io/personal_portfolio" target="_blank" class="footer-link">
+        <i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>
