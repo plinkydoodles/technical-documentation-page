@@ -10,4 +10,4 @@ You can use HTML, JavaScript, and CSS to complete this project.
 
 ## Completed Project
 
-https://plinkydoodles.github.io/technical-documentation-page
+https://plinkysumagyap.github.io/technical-documentation-page
